@@ -19,6 +19,7 @@ public class CesarSchoolSteps {
 	}
 	@When("I go to the second posts page")
     public void goToSecondPostPage() {
+		page.CesarSchoolPage.goToSecondPage();
 		
 	}
 	@When("I print the title")

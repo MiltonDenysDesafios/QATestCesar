@@ -57,24 +57,7 @@ public class BasePage {
 		Element.sendKeys(value);
 
 	}
-	/**
-	 * @author Milton_Denys
-	 * @param xpath
-	 * @param tag
-	 * Return a list of elements
-	 * @return
-	 */
-	public static List<WebElement> listElements(String xpath, String tag){
-		try{
-			WebElement Table = driver.findElement(By.xpath(xpath));
-			List<WebElement> rows_table = Table.findElements(By.tagName(tag));
-			return rows_table;
-		} catch (Exception e){
-			quitDriver();
-		}
-		return listOfElements;
-
-	}
+	
 	public static void scroolDown() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,2000)");
@@ -85,30 +68,6 @@ public class BasePage {
 
 		String value = driver.findElement(By.xpath(xpath)).getText();
 		System.out.println(value);
-	}
-	
-	/**
-	 * @author Milton_Denys
-	 * @return 
-	 */
-	public static void selectListOfElements(String xpath, String tag){
-		listOfElements = listElements(xpath, tag);
-	}
-	/**
-	 * @author Milton_Denys
-	 * method to scroll through list and click on element
-	 * @return 
-	 */
-	public static void clickOnListOfElements(String value){
-		try{
-			for(int i=0;i<listOfElements.size();i++){
-				if(listOfElements.get(i).equals(value)){
-					listOfElements.get(i).click();
-					break;
-				}
-			}
-		}catch (Exception e){
-		}
 	}
 	
 	public static void hoverAction(String xpath) {

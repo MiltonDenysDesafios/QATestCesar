@@ -18,10 +18,12 @@ public class DiscourseSteps {
 		page.DiscoursePage.clicarOpcaoDemo();
 	}
 	@And("I scroll to the bottom of the page")
-    public void scrollDownPage() {		
+    public void scrollDownPage() {	
+		page.DiscoursePage.ScrollDownNewPageDiscourse();
  }
 	@Then("I print the title of all closed topics")
     public void PrintTitleAllClosedTopics() {
+		page.DiscoursePage.printClosedTopics();
 		
  }
 	@And("I print number of items in each category and those that do not have a category")

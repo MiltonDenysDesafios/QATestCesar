@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 features = "src/test/java/features",
 glue = "",
-tags = "@CesarSchool")
+tags = "@Discourse")
 
 public class Tests {
 	

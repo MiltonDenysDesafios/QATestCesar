@@ -33,14 +33,14 @@ public class CesarSchoolPage extends BasePage{
 		String xpath = "//h2[@class='entry-title']";
 		WebElement list = driver.findElement(By.xpath(xpath));
 		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
-		System.out.println(rows_table.get(2).getText());
+		System.out.println(rows_table.get(1).getText());
 		}
 	
 	public static void getPublishDate() {
-		String xpath = "//time[@class='entry-date published']";
+		String xpath = "//time[@class='entry-date published updated']";
 		WebElement list = driver.findElement(By.xpath(xpath));
 		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
-		System.out.println(rows_table.get(2).getText());
+		System.out.println(rows_table.get(0).getText());
 	}
 	public static void getTitlePost() {
 		returnValue("//h1[@class=\"entry-title\"]");
@@ -49,6 +49,12 @@ public class CesarSchoolPage extends BasePage{
 		returnValue("//div[@class='onde']/p");
 	}
 	
+	public static void goToSecondPage() {
+		String xpath = "//a[@class=\"page-numbers\"]";
+		WebElement list = driver.findElement(By.xpath(xpath));
+		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
+		rows_table.get(0).click();
+	}
 	public static void clickSubMenuButtonBlog() {
 		click("//li[@id=\"menu-item-15254\"]");
 	}
@@ -56,7 +62,7 @@ public class CesarSchoolPage extends BasePage{
 		String xpath = "//div[@class=\"post-thumb-img-content post-thumb\"]";
 		WebElement list = driver.findElement(By.xpath(xpath));
 		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
-		rows_table.get(3).click();
+		rows_table.get(2).click();
 	}
 	
 }
