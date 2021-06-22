@@ -11,11 +11,11 @@ public class CesarSchoolSteps {
  }
 	@When("I open menu 'School'")
     public void openMenuSchool() {
-		
+		page.CesarSchoolPage.clickHeaderButtons();
 	}
 	@When("I click on 'Blog' option")
     public void clickBlog() {
-		
+		page.CesarSchoolPage.clickSubMenuButtonBlog();
 	}
 	@When("I go to the second posts page")
     public void goToSecondPostPage() {
@@ -33,7 +33,7 @@ public class CesarSchoolSteps {
     public void accessThirdPostPage() {
 		
 	}
-	@When("I print the title")
+	@When("I print the title1")
     public void printTitle1() {
 		
 	}

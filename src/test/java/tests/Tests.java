@@ -9,9 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = "src/test/java/features/Discourse.feature",
+features = "src/test/java/features",
 glue = "",
-tags = "@Test")
+tags = "@CesarSchool")
 
 public class Tests {
 	

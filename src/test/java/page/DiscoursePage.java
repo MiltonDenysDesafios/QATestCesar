@@ -19,6 +19,7 @@ public class DiscoursePage extends BasePage{
 	
 	public static void clicarOpcaoDemo() {		
 		String option = dataTableInfo.get(0).get("Option");
+		click(comboHeaderOptions(option));
 	}
 	
 }
