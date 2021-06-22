@@ -17,13 +17,21 @@ public class DiscourseSteps {
     public void clickDemo() {
 		page.DiscoursePage.clicarOpcaoDemo();
 	}
-	@And("I Scroll to the bottom of the page")
+	@And("I scroll to the bottom of the page")
     public void scrollDownPage() {		
  }
-	@Then("I Print the title of all closed topics")
+	@Then("I print the title of all closed topics")
     public void PrintTitleAllClosedTopics() {
 		
  }
+	@And("I print number of items in each category and those that do not have a category")
+    public void printNumberOfItemsEachCategoryAndThoseThatDoNotHaveOne() {
+	
+ }
+	@And("I print the title of the topic that contains the most views")
+    public void printTitleTopicContainsMostViews() {
+ }
+	
 	@And("end the test")
     public void endTest() {
 		page.BasePage.quitDriver();

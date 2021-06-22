@@ -4,9 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DiscoursePage extends BasePage{
-
-	
-	//*[@id="main"]/ul/li[4]
 	
 	
 	public static String comboHeaderOptions(String headerOption) {
@@ -21,9 +18,7 @@ public class DiscoursePage extends BasePage{
 	
 	
 	public static void clicarOpcaoDemo() {		
-		String option = issue_info.get(0).get("Option");
-		clicar(comboHeaderOptions(option));
-		System.out.println(option);				
+		String option = dataTableInfo.get(0).get("Option");
 	}
 	
 }
