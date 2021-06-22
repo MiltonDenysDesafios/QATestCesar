@@ -23,9 +23,16 @@ public class CesarSchoolPage extends BasePage{
 	}
 	public static void clickHeaderButtons() {
 		hoverAction(comboHeaderMenu(dataTableInfo.get(0).get("Menu")));
-		//click(comboHeaderMenu(dataTableInfo.get(0).get("Menu")));
 	}
 			
+	
+	public static void getTitle() {
+		returnValue("//*[@id=\"post-26005\"]/div/div/header/h2/a");
+	}
+	public static void getPublishDate() {
+		returnValue("//*[@id=\"post-26005\"]/div/div/div[1]/a/div/span");
+	}
+	
 	
 	
 	public static void clickSubMenuButtonBlog() {

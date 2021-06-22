@@ -23,11 +23,12 @@ public class CesarSchoolSteps {
 	}
 	@When("I print the title")
     public void printTitle() {
+		page.CesarSchoolPage.getTitle();
 		
 	}
 	@When("I print the publication date")
     public void printPublicationDate() {
-		
+		page.CesarSchoolPage.getPublishDate();
 	}
 	@When("I access the third post page")
     public void accessThirdPostPage() {

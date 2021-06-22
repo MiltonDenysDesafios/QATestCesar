@@ -74,6 +74,13 @@ public class BasePage {
 		return listOfElements;
 
 	}
+	
+	public static void returnValue(String xpath) {
+
+		String value = driver.findElement(By.xpath(xpath)).getText();
+		System.out.println(value);
+	}
+	
 	/**
 	 * @author Milton_Denys
 	 * @return 

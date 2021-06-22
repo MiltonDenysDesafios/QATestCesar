@@ -8,9 +8,9 @@ Feature: Discourse
    |SCHOOL			|https://www.cesar.school	|
    When I open menu 'School'
 	 And I click on 'Blog' option
-#	 And I go to the second posts page
-#	 Then I print the title
-#	 And I print the publication date
+	 And I go to the second posts page
+	 Then I print the title
+	 And I print the publication date
 #	 And I access the third post page
 #	 And I print the title1
 #	 And I print the author
