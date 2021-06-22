@@ -4,21 +4,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class CesarSchoolPage extends BasePage{
 
 	protected static List<WebElement> listOfElements;
 
+	
 	public static String comboHeaderMenu(String menuOption) {
 		Map<String, String> xpaths = new HashMap<String, String>();
-		xpaths.put("CESAR School ON", "//*[@id=\"menu-item-15713\"]/a/span[2]");
-		xpaths.put("SCHOOL", "//*[@id=\"menu-item-15376\"]/a/span[2]");
-		xpaths.put("Vestibular 2021.2", "//*[@id=\"menu-item-17904\"]/a/span[2]");
-		xpaths.put("GRADUAÇÃO", "//*[@id=\"menu-item-7611\"]/a/span[2]");
-		xpaths.put("PÓS-GRADUAÇÃO", "//*[@id=\"menu-item-7612\"]/a/span[2]");
-		xpaths.put("EXTENSÃO", "//*[@id=\"menu-item-7614\"]/a/span[2]");
-		xpaths.put("FORMAÇÃO EXECUTIVA", "//*[@id=\"menu-item-15614\"]/a/span[2]");
+		xpaths.put("CESAR School ON", "//li[@id='menu-item-15713']");
+		xpaths.put("SCHOOL", "//li[@id='menu-item-15376']");
+		xpaths.put("Vestibular 2021.2", "//li[@id='menu-item-17904']");
+		xpaths.put("GRADUAÇÃO", "//li[@id='menu-item-7611']");
+		xpaths.put("PÓS-GRADUAÇÃO", "//li[@id='menu-item-7612']");
+		xpaths.put("EXTENSÃO", "//li[@id='menu-item-7614']");
+		xpaths.put("FORMAÇÃO EXECUTIVA", "//li[@id='menu-item-15614']");
 		return xpaths.get(menuOption).toLowerCase().toString();
 	}
 	public static void clickHeaderButtons() {
@@ -26,24 +28,35 @@ public class CesarSchoolPage extends BasePage{
 	}
 			
 	
-	public static void getTitle() {
-		returnValue("//*[@id=\"post-26005\"]/div/div/header/h2/a");
-	}
+	
+	public static void getSecondTitle() {
+		String xpath = "//h2[@class='entry-title']";
+		WebElement list = driver.findElement(By.xpath(xpath));
+		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
+		System.out.println(rows_table.get(2).getText());
+		}
+	
 	public static void getPublishDate() {
-		returnValue("//*[@id=\"post-26005\"]/div/div/div[1]/a/div/span");
+		String xpath = "//time[@class='entry-date published']";
+		WebElement list = driver.findElement(By.xpath(xpath));
+		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
+		System.out.println(rows_table.get(2).getText());
 	}
 	public static void getTitlePost() {
-		returnValue("//*[@id=\"post-25690\"]/div/header/div[2]/h1");
+		returnValue("//h1[@class=\"entry-title\"]");
 	}
 	public static void getAddress() {
 		returnValue("//div[@class='onde']/p");
 	}
 	
 	public static void clickSubMenuButtonBlog() {
-		click("//*[@id=\"menu-item-15254\"]/a/span[2]");
+		click("//li[@id=\"menu-item-15254\"]");
 	}
 	public static void clickThirdPost() {
-		click("//*[@id=\"post-25690\"]/div/div/div[1]/div/a/img");
+		String xpath = "//div[@class=\"post-thumb-img-content post-thumb\"]";
+		WebElement list = driver.findElement(By.xpath(xpath));
+		List<WebElement> rows_table = list.findElements(By.xpath(xpath));
+		rows_table.get(3).click();
 	}
 	
 }

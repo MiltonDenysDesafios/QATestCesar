@@ -23,7 +23,7 @@ public class CesarSchoolSteps {
 	}
 	@When("I print the title")
     public void printTitle() {
-		page.CesarSchoolPage.getTitle();
+		page.CesarSchoolPage.getSecondTitle();
 		
 	}
 	@When("I print the publication date")

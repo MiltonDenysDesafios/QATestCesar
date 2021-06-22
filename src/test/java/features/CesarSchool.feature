@@ -15,6 +15,6 @@ Feature: Discourse
 	 And I print the post title
 #	 And I print the author
 	 And I go to the end of page
-	 And I print the address of the cesar school
-	 And end the test
+#	 And I print the address of the cesar school
+ #And end the test
 
