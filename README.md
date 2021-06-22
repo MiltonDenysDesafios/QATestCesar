@@ -24,7 +24,6 @@ Para utilização de tags nas features, existe algumas nomenclaturas já utiliza
 
 # Estrutura de pastas utilizadas:
 O projeto contém a seguinte estrutura
-- **** – Responsável pela configuração específicas do ambiente
 - **tests** -  configurações de execução do cucumber
 - **page** – utilizado para armazenar métodos reutilizáveis e armazena arquivos responsáveis pelas interações dos elementos mapeados.
 - **feaures** - Local onde são armazenadas as features do projeto 
