@@ -32,12 +32,18 @@ public class CesarSchoolPage extends BasePage{
 	public static void getPublishDate() {
 		returnValue("//*[@id=\"post-26005\"]/div/div/div[1]/a/div/span");
 	}
-	
-	
+	public static void getTitlePost() {
+		returnValue("//*[@id=\"post-25690\"]/div/header/div[2]/h1");
+	}
+	public static void getAddress() {
+		returnValue("//div[@class='onde']/p");
+	}
 	
 	public static void clickSubMenuButtonBlog() {
 		click("//*[@id=\"menu-item-15254\"]/a/span[2]");
 	}
-	
+	public static void clickThirdPost() {
+		click("//*[@id=\"post-25690\"]/div/div/div[1]/div/a/img");
+	}
 	
 }

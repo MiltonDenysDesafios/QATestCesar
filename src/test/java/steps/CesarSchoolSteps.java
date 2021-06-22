@@ -32,11 +32,11 @@ public class CesarSchoolSteps {
 	}
 	@When("I access the third post page")
     public void accessThirdPostPage() {
-		
+		page.CesarSchoolPage.clickThirdPost();
 	}
-	@When("I print the title1")
-    public void printTitle1() {
-		
+	@When("I print the post title")
+    public void printTitlePost() {
+		page.CesarSchoolPage.getTitlePost();
 	}
 	@When("I print the author")
     public void printAuthor() {
@@ -44,11 +44,11 @@ public class CesarSchoolSteps {
 	}
 	@When("I go to the end of page")
     public void goToTheEndOfPage() {
-		
+		page.BasePage.scroolDown();
 	}
 	@When("I print the address of the cesar school")
     public void printAddressCesarSchool() {
-		
+		page.CesarSchoolPage.getAddress();
 	}
 	
 
